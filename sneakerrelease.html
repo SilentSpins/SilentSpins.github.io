@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Minh Chau
+    Comp Sci 20 Mr Schellenberg
+    HTML/CSS Assignment -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sneaker Watcher | Sneaker Releases</title>
+</head>
+<body>
+        <header>
+                <div class="bgimage">
+                    <div class="logo">
+                        <h1> ‏‏‎ </h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="mainpage.html"><i class="fa fa-fw fa-home"></i> Home</a> </li>
+                        <li><a href="price.html">Sneaker Resell Prices</a> </li>
+                        <li><a href="sneakerrelease.html">Sneaker Releases</a></li>
+                        <li><a href="sneakerheads.html">Sneakerheads</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="social-bar">
+                    <a href="https://www.facebook.com/sneakerwatcher/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/SneakerWatcherr" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/watchthesneakerss/" class="fa fa-instagram"></a>
+                    </div>
+                    <img src="logo.jpg" alt="logo" class="mainlogo">
+    <section id="sneakerrel">
+        <div class="container">
+            <h2><strong>Sneaker Releases</strong></h2>
+            <section id="slideshow">
+                <div class="mySlides fade">
+                   <a href="https://sneakernews.com/2019/05/17/toy-story-4-adidas-ultra-boost-19-release-date/"><img src="toystory.jpg" alt="adidas Ultra Boost 2019 Toy Story 4" style="width:100%" title="adidas Ultra Boost 2019 Toy Story 4"></a>
+                    <div class="cap">adidas Ultra Boost 2019 "Toy Story 4"</div>
+                </div>
+    
+                <div class="mySlides fade">
+                   <a href="https://sneakernews.com/2019/06/07/adidas-yeezy-boost-700-v2-tephra-fu7914-store-list/"><img src="tephra.jpg" alt="adidas Yeezy Boost 700 v2 Tephra"  style="width:100%" title="adidas Yeezy Boost 700 v2 Tephra"></a>
+                    <div class="cap">adidas Yeezy Boost 700 v2 "Tephra" </div>
+                </div>
+    
+                <div class="mySlides fade">
+                   <a href="https://sneakernews.com/2019/06/03/adidas-yeezy-boost-350-v2-synth-releasing-june-22nd/"><img src="synth.jpg" alt="adidas Yeezy Boost 350 v2 “Synth”" style="width:100%" title="adidas Yeezy Boost 350 v2 “Synth”"></a>
+                    <div class="cap">adidas Yeezy Boost 350 v2 “Synth”</div>
+                </div>
+    
+                <div class="slideshowdots">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+    
+    
+                <!-- Script from W3Schools -->
+                <script>
+                        var slideIndex = 0;
+                        showSlides();
+                        
+                        function showSlides() {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          var dots = document.getElementsByClassName("dot");
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                          }
+                          slideIndex++;
+                          if (slideIndex > slides.length) {slideIndex = 1}    
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                          setTimeout(showSlides, 2000); // Change image every 2 seconds
+                        }
+                        </script>
+        </div>
+    </section>
+    <ul>
+        <li><a href="http://bit.ly/2px6VUg">Nike</a></li>
+        <li><a href="http://bit.ly/2MPAwU8">Foot Locker</a></li>
+        <li><a href="http://bit.ly/2MPB24w">Champs Sports</a></li>
+        <li><a href="http://bit.ly/2iTFlhW">Stadium Goods</a></li>
+    </ul>
+    <hr>
+
+    <section id="sneakerreleases">
+        <div class = "container">
+            <h3>
+                RELEASE DATES
+            </h3>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/19/nike-adapt-bb-wolf-grey-release-date/"><img src="adapt.jpg" alt="Nike Adapt BB Mag"></a>
+                <p><strong>May 29th</strong><br> <i>Nike Adapt BB "Mag"</i><br>$350 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/06/sacai-nike-ld-waffle-blazer-store-list/"><img src="sacai1.jpg" alt="Sacai x Nike"></a>
+                <p><strong>May 30th</strong><br> <i>Sacai x Nike Blazer</i><br>$140 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/06/sacai-nike-ld-waffle-blazer-store-list/"><img src="sacai2.jpg" alt="Sacai x Nike"></a>
+                <p><strong>May 30th</strong><br> <i>Sacai x Nike Blazer</i><br>$140 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/tag/nike-air-max-2-light/"><img src="maxlight1.jpg" alt="Nike Air Max 2 Light"></a>
+                <p><strong>May 30th</strong><br> <i>Nike Air Max 2 Light</i><br>$140 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/tag/nike-air-max-2-light/"><img src="maxlight2.jpg" alt="Nike Air Max 2 Light"></a>
+                <p><strong>May 29th</strong><br> <i>Nike Air Max 2 Light</i><br>$140 </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="sneakerreleases">
+        <div class = "container">
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/23/wanto-adidas-yung-1-release-date/"><img src="wanto.jpg" alt="Wanto x adidas Yung 1"></a>
+                <p><strong>May 30th</strong><br> <i>Wanto x adidas Yung 1</i><br>$180 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/01/nike-air-max-1-swipa-deaaron-fox/"><img src="swipa.jpg" alt="Nike Air Max 1 'Swipa'"></a>
+                <p><strong>May 31th</strong><br> <i>Nike Air Max 1 'Swipa'</i><br>$ N/A </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/01/15/nike-air-max-95-have-a-nike-day-blue/"><img src="maxlight2.jpg" alt="Nike Air Max 95 'Have A Nike Day'"></a>
+                <p><strong>May 31st</strong><br> <i>Nike Air Max 95 "Have A Nike Day"</i><br>$140 </p>
+                
+            </div>            
+            <div class="box">
+                <a href="https://sneakernews.com/2019/02/01/nike-air-max-97-bv6670-101-silver-blue-release-info/"><img src="max97.jpg" alt="Nike Air Max 97"></a>
+                <p><strong>May 31st</strong><br> <i>Nike Air Max 97</i><br>$160</p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/14/nike-air-max-97-seahawks-ck0896-001-release-info/"><img src="max972.jpg" alt="Nike Air Max 97"></a>
+                <p><strong>May 31st</strong><br> <i>Nike Air Max 97</i><br>$160</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sneakerreleases">
+        <div class = "container">
+            <div class="box">
+                <a href="https://sneakernews.com/2019/04/28/nike-vapormax-2019-cool-grey-hyper-jade-ci6400-002/"><img src="vapormax.jpg" alt="Nike Vapormax 2019"></a>
+                <p><strong>May 31st</strong><br> <i>Nike Vapormax 2019</i><br>$190 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/02/adidas-nmd-r1-palm-tree-ef2330-release-info/"><img src="nmd.jpg" alt="adidas NMD R1"></a>
+                <p><strong>May 31st</strong><br> <i>adidas NMD R1</i><br>$130 </p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/22/nike-zoom-pegasus-35-turbo-blue-ribbon-sports-cj8296-100-release-info/"><img src="pegasus.jpg" alt="Nike Zoom Pegasus 35 Turbo"></a>
+                <p><strong>May 31st</strong><br> <i>Nike Zoom Pegasus 35 Turbo</i><br>$180</p>
+                
+            </div>            
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/23/nike-sb-blazer-mid-washed-coral-864349-004-release-info/"><img src="sbblazer.jpg" alt="Nike SB Blazer Mid"></a>
+                <p><strong>May 31st</strong><br> <i>Nike SB Blazer Mid</i><br>$85</p>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/04/29/undefeated-adidas-ultra-boost-ef1968-release-info/"><img src="undftd.jpg" alt="UNDFTD X adidas Ultraboost"></a>
+                <p><strong>May 31st</strong><br> <i>UNDFTD X adidas Ultraboost</i><br>$220</p>
+            </div>
+
+            <button onclick="showmore('block');" class="block">More Releases</button>
+
+            <div id="block">
+                <div class = "container">
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/03/polar-skate-nike-sb-air-trainer-1-ci6892-001-release-date/"><img src="polar.jpg" alt="Polar Skate Co. x Nike SB Air Trainer 1"></a>
+                        <p><strong>June 10th</strong><br> <i>Polar Skate Co. x Nike SB Air Trainer 1</i><br>$195</p>
+                </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/03/nike-air-max-plus-color-flip-ci5924-531-release-info/"><img src="colorflip.jpg" alt="Nike Air Max Plus “Color Flip”"></a>
+                        <p><strong>June 10th</strong><br> <i>Nike Air Max Plus “Color Flip”</i><br>$150 </p>
+                        </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/03/polar-skate-co-nike-sb-blazer-low-release-info/"><img src="polarsb.jpg" alt="Polar Skate Co. Nike SB"></a>
+                        <p><strong>June 10th</strong><br> <i>Polar Skate Co. Nike SB</i><br>$120</p>              
+                    </div>            
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/10/nike-golf-no-denim-allowed-pack-store-list/"><img src="airmaxgolf.jpg" alt="Nike Air Max 1 Golf"></a>
+                        <p><strong>June 10th</strong><br> <i>Nike Air Max 1 Golf</i><br>$140</p>
+                    </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/10/nike-air-max-720-red-blue-black-cj0766-600-release-info/"><img src="airmax720.jpg" alt="Nike Air Max 720"></a>
+                        <p><strong>June 10th</strong><br> <i>Nike Air Max 720</i><br>$180</p>
+                    </div>
+            </div>
+
+            <div class = "container">
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/03/26/odell-beckham-jr-nike-air-max-720-release-info/"><img src="obj720.jpg" alt="OBJ x Nike air Max 720"></a>
+                        <p><strong>June 13th</strong><br> <i>OBJ x Nike Air Max 720</i><br>$ N/A</p>
+                </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/07/comme-des-garcons-nike-shox-tl-black-cj0546-001-release-date/"><img src="comme.jpg" alt="Comme des Garçons x Nike Shox TL"></a>
+                        <p><strong>June 13th</strong><br> <i>Comme des Garçons x Nike Shox TL Black</i><br>$350 </p>
+                        </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/07/comme-des-garcons-nike-shox-tl-white-cj0546-100-release-date/"><img src="commewhite.jpg" alt="Comme des Garçons x Nike Shox TL White"></a>
+                        <p><strong>June 13th</strong><br> <i>Comme des Garçons x Nike Shox TL White</i><br>$350</p>              
+                    </div>            
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/05/28/nike-air-max-90-be-true-store-list/"><img src="betrue.jpg" alt="Nike Air Max  90 Be True"></a>
+                        <p><strong>June 15th</strong><br> <i>Nike Air Max  90 Be True</i><br>$130</p>
+                    </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/01/nike-air-max-97-rf-blue-teal-bv0050-100-release-date/"><img src="airmax97.jpg" alt="Nike Air Max 97 RF"></a>
+                        <p><strong>June 15th</strong><br> <i>Nike Air Max 97 RF</i><br>$160</p>
+                    </div>
+            </div>
+
+            <div class = "container">
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/07/adidas-yeezy-boost-700-v2-tephra-fu7914-store-list/"><img src="tephradis.jpg" alt="adidas Yeezy Boost 700 v2 “Tephra”" width="300px"></a>
+                        <p><strong>June 15th</strong><br> <i>adidas Yeezy Boost 700 v2 “Tephra”</i><br>$300</p>
+                </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/06/10/reigning-champ-brings-signature-neutral-tones-asics-capsule/"><img src="reigning.jpg" alt="Reigning Champ x Asics Gel Kayano 5"></a>
+                        <p><strong>June 15th</strong><br> <i>Reigning Champ x Asics Gel Kayano 5</i><br>$140 </p>
+                        </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/05/23/nike-kyrie-5-black-gold-white-aq2456-007/"><img src="kyrie5.jpg" alt="Nike Kyrie 5"></a>
+                        <p><strong>June 16th</strong><br> <i>Nike Kyrie 5</i><br>$110</p>              
+                    </div>            
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/05/17/toy-story-4-adidas-ultra-boost-19-release-date/"><img src="ultraboosttoystory.jpg" alt="adidas Ultra Boost 2019 Toy Story 4"></a>
+                        <p><strong>June 21st</strong><br> <i>adidas Ultra Boost 2019 "Toy Story 4"</i><br>$ N/A</p>
+                    </div>
+                    <div class="box">
+                        <a href="https://sneakernews.com/2019/05/29/toy-story-4-adidas-ultra-boost-19-buzz-lightyear-release-date/"><img src="ultraboostbuzz.jpg" alt="adidas Ultra Boost 2019 Buzz Lightyear"></a>
+                        <p><strong>June 21st</strong><br> <i>adidas Ultra Boost 2019 "Buzz Lightyear"</i><br>$ N/A</p>
+                    </div>
+
+            </div>
+           <a href="https://sneakernews.com/release-dates/"><button class="block">Show All</button></a>
+        </div>
+    </section>
+
+
+    <script>
+            function showmore(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        </script>
+    <hr>
+
+    <section id="poplinks">
+        <div class="container">
+            <h3>
+                POPULAR LINKS
+            </h3>
+            <ul>
+                <li><a href="https://sneakernews.com/tag/adidas-yeezy/">adidas Yeezy</a> </li>
+                <li><a href="https://hypebeast.com/tags/air-jordan-1">Air Jordan 1</a> </li>
+                <li><a href="https://sneakernews.com/tag/adidas-yeezy-boost-350-v2/">Yeezy 350</a> </li>
+                <li><a href="https://sneakernews.com/tag/nike-kyrie-5/">Kyrie 5</a> </li>
+                <li><a href="https://hypebeast.com/tags/off-white-x-nike">OFFWHITE x Nike</a> </li>
+                <li><a href="https://sneakernews.com/tag/nike-lebron-16/">Lebron 16</a> </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Copyright &copy; Sneaker Watcher
+    </footer>
+
+</body>
+</html>

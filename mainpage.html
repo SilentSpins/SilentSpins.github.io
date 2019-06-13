@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Minh Chau
+    Comp Sci 20 Mr Schellenberg
+    HTML/CSS Assignment -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sneaker Watcher | Home</title>
+</head>
+<body>
+    <header>
+        <div class="bgimage">
+            <div class="logo">
+                <h1> ‏‏‎ </h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="mainpage.html"><i class="fa fa-fw fa-home"></i> Home</a> </li>
+                <li><a href="price.html">Sneaker Resell Prices</a> </li>
+                <li><a href="sneakerrelease.html">Sneaker Releases</a></li>
+                <li><a href="sneakerheads.html">Sneakerheads</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="social-bar">
+            <a href="https://www.facebook.com/sneakerwatcher/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/SneakerWatcherr" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/watchthesneakerss/" class="fa fa-instagram"></a>
+            </div>
+            <img src="logo.jpg" alt="logo" class="mainlogo">
+            <div class="container">
+                <h2><strong>Trending Sneakers</strong></h2>
+            </div>
+    <section id="slideshow">
+            <div class="mySlides fade">
+               <a href="https://sneakernews.com/2018/08/17/air-jordan-4-raptors-release-info/"><img src="rapsdrake.jpg" alt="Air Jordan 4 “Raptors”" style="width:100%" title="Air Jordan 4 “Raptors” Release Info"></a>
+                <div class="cap">Air Jordan 4 “Raptors” Release Info</div>
+            </div>
+
+            <div class="mySlides fade">
+               <a href="https://sneakernews.com/2019/06/06/adidas-yeezy-boost-350-v2-black-fu9006-release-info/"><img src="allblack.jpg" alt="Black" style="width:100%" title="adidas Yeezy Boost 350 v2 Black Release Info "></a>
+                <div class="cap">adidas Yeezy Boost 350 v2 "Black" Release Info </div>
+            </div>
+
+            <div class="mySlides fade">
+               <a href="https://sneakernews.com/2019/06/05/off-white-nike-air-force-1-mca-blue-virgil-abloh/"><img src="mca.jpg" alt="mca" style="width:100%" title="Off-White x Nike Air Force 1 “MCA” Design Reveal"></a>
+                <div class="cap">Off-White x Nike Air Force 1 “MCA” Design Reveal</div>
+            </div>
+
+            <div class="slideshowdots">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+
+
+            <!-- Script from W3Schools -->
+            <script>
+                    var slideIndex = 0;
+                    showSlides();
+                    
+                    function showSlides() {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      slideIndex++;
+                      if (slideIndex > slides.length) {slideIndex = 1}    
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                      setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+                    }
+                    </script>
+
+    </section>
+
+
+    <section id="relstories">
+        <div class = "container">
+            <h3>
+                RELEVANT STORIES
+            </h3>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/24/nike-air-force-1-inside-out/"><img src="nike1.jpg" alt="Air Force 1 Inside Out"></a>
+                <p>Nike Release: Air Force 1 "Inside Out"</p>
+                <button class="button-like">
+                        <i class="fa fa-heart"></i>
+                         
+                      </button>
+            </div>
+            <div class="box">
+                <a href="https://solecollector.com/news/2019/05/nike-air-max-270-react-release-date"><img src="nike2.jpg" alt="Nike Air Max 270 React"></a>
+                <p>First look at the Nike Air Max 270 React</p>
+                <button class="button-like">
+                        <i class="fa fa-heart"></i>
+                         
+                      </button>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/22/jordan-1-sb-la-chicago-store-list/"><img src="nike3.jpg" alt="Jordan 1 SB LA/Chicago"></a>
+                <p>Where to purchase the Jordan 1 LA/Chicago</p>
+                <button class="button-like">
+                        <i class="fa fa-heart"></i>
+                         
+                      </button>
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/24/nike-kyrie-5-spongebob-squarepants/"><img src="nike5.jpg" alt="Spongebob Squarepants Kyries"></a>
+                <p>Spongebob Squarepants with Nike Kyrie 5s</p>
+                <button class="button-like">
+                        <i class="fa fa-heart"></i>
+                </button>
+                           
+                          
+            </div>
+            <div class="box">
+                <a href="https://sneakernews.com/2019/05/24/adidas-yeezy-boost-350-v2-glow-official-release-info/"><img src="adidas1.jpg" alt="Where to Buy"></a>
+                <p>adidas Yeezy Boost 350 v2 "Glow" Release</p>
+                <button class="button-like">
+                        <i class="fa fa-heart"></i>
+                      </button>
+            </div>
+        </div>
+
+        <script>
+        $(document).foundation();
+
+$(function() {
+  $('.button-like')
+    .bind('click', function(event) {
+      $(".button-like").toggleClass("liked");
+    })
+});</script>
+    </section>
+     <hr>
+
+    <section id="poplinks">
+        <div class="container">
+            <h3>
+                POPULAR LINKS
+            </h3>
+            <ul>
+                <li><a href="https://sneakernews.com/tag/adidas-yeezy/" target="_blank">adidas Yeezy</a> </li>
+                <li><a href="https://hypebeast.com/tags/air-jordan-1">Air Jordan 1</a> </li>
+                <li><a href="https://sneakernews.com/tag/adidas-yeezy-boost-350-v2/">Yeezy 350</a> </li>
+                <li><a href="https://sneakernews.com/tag/nike-kyrie-5/">Kyrie 5</a> </li>
+                <li><a href="https://hypebeast.com/tags/off-white-x-nike">OFFWHITE x Nike</a> </li>
+                <li><a href="https://sneakernews.com/tag/nike-lebron-16/">Lebron 16</a> </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Copyright &copy; Sneaker Watcher
+    </footer>
+
+</body>
+</html>
