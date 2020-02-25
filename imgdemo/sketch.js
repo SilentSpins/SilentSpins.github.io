@@ -8,7 +8,7 @@ let doge;
 let scaler = 0.5;
 
 function preload(){
-  doge = loadImage("assets/doge.png")
+  doge = loadImage("assets/doge.png");
 
 }
 function setup() {
@@ -28,6 +28,6 @@ function draw() {
   background(220);
   fill("blue");
   // rect(mouseX,mouseY,75,75);
-  image(doge, mouseX-150, mouseY-70,doge.width*scaler,doge.length*scaler)
+  image(doge, mouseX-150, mouseY-70,doge.width*scaler,doge.length*scaler);
 
 }
