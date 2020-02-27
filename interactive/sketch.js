@@ -7,6 +7,7 @@ let endMilisecond;
 let results;
 let state;
 let timer;
+let highscore = [5000000000000];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -20,6 +21,7 @@ function setup() {
   state = "blue";
   fill("blue");
   background("grey");
+  
 }
 
 function draw() {    
@@ -32,7 +34,10 @@ function draw() {
     state = "green";
     fill(state);
     initialMilisecond = millis();
-    return initialMilisecond;
+  }
+  if (results < highscore[0]){
+    highscore.unshift(results);
+    text("Your Highest score is " + results + " ms",windowWidth-150,100);
   }
 }
 
@@ -42,10 +47,9 @@ function mouseClicked() {
     endMilisecond = millis();
     results = round(initialMilisecond-endMilisecond)*-1;
     state = "red";
-  }
-  // eslint-disable-next-line use-isnan
-  if (results !== NaN){
     print(results);
+    return results;
   }
+
   
 }
