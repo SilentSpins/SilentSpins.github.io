@@ -1,4 +1,8 @@
-
+// Reaction Time Game
+// Minh Chau
+// February 28th, 2020
+// Extra for Experts:
+// - describe what you did to take this project "above and beyond"
 let x, y;
 let rectSize;
 let speed;
@@ -8,24 +12,28 @@ let results;
 let state;
 let timer;
 let highscore = [5000000000000];
+let scaleSize = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  x = 0;
-  y = 0;
-  rectSize = 300;
-  speed = 5;
-  state = 0;
   strokeWeight(2);
-  stroke(0);
-  state = "blue";
-  fill("blue");
+  noStroke();
+  state = "red";
+  fill("red");
   background("grey");
-  
 }
 
-function draw() {    
-  rect(x, y, rectSize, rectSize);
+function mouseWheel(event){
+  print(event.delta);
+  if (event.delta < 0){
+    scaleSize*=1.1;
+  }
+}
+
+function draw() {   
+  width = windowWidth/3*scaleSize;
+  height = windowHeight*scaleSize; 
+  rect(0, 0, width, height);
   timer = round(random(1,3));
   if (frameCount % 60 === 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
@@ -37,19 +45,24 @@ function draw() {
   }
   if (results < highscore[0]){
     highscore.unshift(results);
-    text("Your Highest score is " + results + " ms",windowWidth-150,100);
+    fill("grey");
+    rect(windowWidth-200,0,width,windowHeight);
+    fill("red");
+    text("Your Highest score is " + results + " ms",windowWidth-200,30);
   }
 }
 
 function mouseClicked() {
-  if (mouseX < 300 && mouseX > 0 && mouseY < 300 && mouseY > 0 && state === "green" || state === "blue"){
+  width = windowWidth/2*scaleSize;
+  height = windowHeight*scaleSize; 
+  if (mouseX < width && mouseX > 0 && mouseY < height && mouseY > 0 && state === "green"){
     fill("red");
     endMilisecond = millis();
     results = round(initialMilisecond-endMilisecond)*-1;
     state = "red";
-    print(results);
-    return results;
+    fill("grey");
+    rect(width,0,300,300);
+    fill("red");
+    text("You got " + results + " ms", width, 30 );
   }
-
-  
 }
