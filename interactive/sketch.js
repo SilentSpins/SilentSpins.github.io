@@ -8,32 +8,56 @@ let rectSize;
 let speed;
 let initialMilisecond;
 let endMilisecond;
+let waitTime = 1500;
 let results;
 let state;
 let timer;
 let highscore = [5000000000000];
 let scaleSize = 1;
+let a = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   strokeWeight(2);
   noStroke();
   state = "red";
-  fill("red");
+  fill(state);
   background("grey");
+  textSize(16);
 }
 
 function mouseWheel(event){
   print(event.delta);
-  if (event.delta < 0){
+  if (event.delta > 0 && width < windowWidth/2){
+    clear();
     scaleSize*=1.1;
+  } 
+  
+  if(event.delta < 0 && width > windowWidth/10){
+    clear();
+    scaleSize*=0.9;
   }
+  
+  background("grey");
 }
 
-function draw() {   
+function draw() {
+
+  rectMaker();
+
+  startTimer();
+
+  highScore();
+}
+
+function rectMaker(){
   width = windowWidth/3*scaleSize;
-  height = windowHeight*scaleSize; 
-  rect(0, 0, width, height);
+  height = windowHeight/3*scaleSize; 
+
+  rect(windowWidth/3, windowHeight/4, width, height);
+}
+
+function startTimer(){
   timer = round(random(1,3));
   if (frameCount % 60 === 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
@@ -43,26 +67,41 @@ function draw() {
     fill(state);
     initialMilisecond = millis();
   }
+}
+
+function highScore(){
   if (results < highscore[0]){
     highscore.unshift(results);
     fill("grey");
-    rect(windowWidth-200,0,width,windowHeight);
+    rect(windowWidth/1.5,0,width,windowHeight);
+    fill("black");
+    text("Your Highest score is " + results + " ms",windowWidth/1.4,30);
     fill("red");
-    text("Your Highest score is " + results + " ms",windowWidth-200,30);
   }
 }
 
+function redSetup(){
+  let niceMessages = ["Close One!", "Nice!" , "That was fast!" , "Well Done!"];
+  state = "red";
+  fill(state);
+  endMilisecond = millis();
+  results = round(initialMilisecond-endMilisecond)*-1;
+  fill("grey");
+  rect(windowWidth/3+width/4,windowHeight/3,500,500);
+  fill("black");
+  niceMessages = niceMessages[random(0,3)];
+  text(niceMessages,windowWidth/3, 50);
+  text("You got " + results + " ms",windowWidth/3+width/4,windowHeight-height );
+  fill(state);
+}
+
+
 function mouseClicked() {
-  width = windowWidth/2*scaleSize;
-  height = windowHeight*scaleSize; 
-  if (mouseX < width && mouseX > 0 && mouseY < height && mouseY > 0 && state === "green"){
-    fill("red");
-    endMilisecond = millis();
-    results = round(initialMilisecond-endMilisecond)*-1;
-    state = "red";
-    fill("grey");
-    rect(width,0,300,300);
-    fill("red");
-    text("You got " + results + " ms", width, 30 );
+  width = windowWidth/3*scaleSize;
+
+  height = windowHeight/3*scaleSize; 
+
+  if (mouseX < windowWidth/3+width && mouseX > windowWidth/3 && mouseY < windowHeight/4+height && mouseY > windowHeight/4 && state === "green"){
+    redSetup();
   }
 }
