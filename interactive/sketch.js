@@ -14,7 +14,6 @@ let state;
 let timer;
 let highscore = [5000000000000];
 let scaleSize = 1;
-let a = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -81,16 +80,12 @@ function highScore(){
 }
 
 function redSetup(){
-  let niceMessages = ["Close One!", "Nice!" , "That was fast!" , "Well Done!"];
-  state = "red";
   fill(state);
   endMilisecond = millis();
   results = round(initialMilisecond-endMilisecond)*-1;
   fill("grey");
   rect(windowWidth/3+width/4,windowHeight/3,500,500);
   fill("black");
-  niceMessages = niceMessages[random(0,3)];
-  text(niceMessages,windowWidth/3, 50);
   text("You got " + results + " ms",windowWidth/3+width/4,windowHeight-height );
   fill(state);
 }
