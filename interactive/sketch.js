@@ -23,6 +23,7 @@ function setup() {
   fill(state);
   background("grey");
   textSize(16);
+  rectMode(CENTER);
 }
 
 function mouseWheel(event){
@@ -36,7 +37,13 @@ function mouseWheel(event){
     clear();
     scaleSize*=0.9;
   }
-  
+  fill("grey");
+  rect(windowWidth/1.2,0,windowWidth,windowHeight);
+  rect(windowWidth/2,0,500,500);
+  fill("black");
+  text("You got " + results + " ms",windowWidth/2.2,15 );
+  text("Your Highest score is " + results + " ms",windowWidth/1.2,15);
+  fill("red");
   background("grey");
 }
 
@@ -53,7 +60,7 @@ function rectMaker(){
   width = windowWidth/3*scaleSize;
   height = windowHeight/3*scaleSize; 
 
-  rect(windowWidth/3, windowHeight/4, width, height);
+  rect(windowWidth/2, windowHeight/2, width, height);
 }
 
 function startTimer(){
@@ -72,24 +79,24 @@ function highScore(){
   if (results < highscore[0]){
     highscore.unshift(results);
     fill("grey");
-    rect(windowWidth/1.5,0,width,windowHeight);
+    rect(windowWidth/1.2,0,100,300);
     fill("black");
-    text("Your Highest score is " + results + " ms",windowWidth/1.4,30);
+    text("Your Highest score is " + results + " ms",windowWidth/1.2,15);
     fill("red");
   }
 }
 
 function redSetup(){
+  state = "red";
   fill(state);
   endMilisecond = millis();
   results = round(initialMilisecond-endMilisecond)*-1;
   fill("grey");
-  rect(windowWidth/3+width/4,windowHeight/3,500,500);
+  rect(windowWidth/2,0,500,500);
   fill("black");
-  text("You got " + results + " ms",windowWidth/3+width/4,windowHeight-height );
+  text("You got " + results + " ms",windowWidth/2.2,15 );
   fill(state);
 }
-
 
 function mouseClicked() {
   width = windowWidth/3*scaleSize;
