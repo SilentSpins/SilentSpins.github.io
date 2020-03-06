@@ -14,11 +14,11 @@ let state;
 let timer;
 let highscore = [5000000000000];
 let scaleSize = 1;
+let tryOne;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  strokeWeight(2);
-  noStroke();
+  strokeWeight(10);
   state = "red";
   fill(state);
   background("grey");
@@ -37,14 +37,17 @@ function mouseWheel(event){
     clear();
     scaleSize*=0.9;
   }
-  fill("grey");
-  rect(windowWidth/1.2,0,windowWidth,windowHeight);
-  rect(windowWidth/2,0,500,500);
-  fill("black");
-  text("You got " + results + " ms",windowWidth/2.2,15 );
-  text("Your Highest score is " + results + " ms",windowWidth/1.2,15);
-  fill("red");
   background("grey");
+  if (tryOne > 0){
+    fill("grey");
+    rect(windowWidth/1.2,0,600,300);
+    rect(windowWidth/2,0,500,500);
+    fill("black");
+    text("Your Highest score is " + results + " ms",windowWidth/1.2,15);
+    text("You got " + results + " ms",windowWidth/2.2,15 );
+    state = "red";
+    fill(state);
+  }
 }
 
 function draw() {
@@ -79,7 +82,7 @@ function highScore(){
   if (results < highscore[0]){
     highscore.unshift(results);
     fill("grey");
-    rect(windowWidth/1.2,0,100,300);
+    rect(windowWidth/1.2,0,600,300);
     fill("black");
     text("Your Highest score is " + results + " ms",windowWidth/1.2,15);
     fill("red");
@@ -96,6 +99,7 @@ function redSetup(){
   fill("black");
   text("You got " + results + " ms",windowWidth/2.2,15 );
   fill(state);
+  return results;
 }
 
 function mouseClicked() {
@@ -104,6 +108,7 @@ function mouseClicked() {
   height = windowHeight/3*scaleSize; 
 
   if (mouseX < windowWidth/3+width && mouseX > windowWidth/3 && mouseY < windowHeight/4+height && mouseY > windowHeight/4 && state === "green"){
+    tryOne = 1;
     redSetup();
   }
 }
