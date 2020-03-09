@@ -1,15 +1,33 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
-
+// Chessboard
+let cellSize;
+let isBlack = true;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  if (windowWidth > windowHeight){
+    createCanvas(windowHeight, windowHeight); 
+  }
+  else{
+    createCanvas(windowWidth, windowWidth);
+  }
+  cellSize = width/8;
 }
 
 function draw() {
-  background(220);
+  for(let x = 0; x < 8;x++){
+    for(let y = 0; y<8;y++){
+      if(isBlack){
+        fill("black");
+      }
+      else{
+        fill("white");
+      }
+      rect(x*cellSize,y*cellSize,cellSize,cellSize);
+      isBlack = !isBlack;
+    }
+    isBlack = !isBlack;
+  }
+}
+
+function windowResized(){
+  setup();
 }
